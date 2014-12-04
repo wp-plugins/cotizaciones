@@ -119,17 +119,17 @@ $url=file_get_contents("http://www.dolar-bluehoy.com/api.php");
 										<th align="center"><center><strong>Venta</strong></center></th>
 									</tr>
 									<tr>
-										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizacion/image/b_USA.gif">&nbsp;Dolar</td>
+										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_USA.gif">&nbsp;Dolar</td>
 										<td align="center">'.$compra[0].'</td>
 										<td align="center">'.$venda[0].'</td>
 									</tr>
 									<tr>
-										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizacion/image/b_EURO.gif">&nbsp;Euro</td>
+										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_EURO.gif">&nbsp;Euro</td>
 										<td align="center">'.$compra[3].'</td>
 										<td align="center">'.$venda[3].'</td>
 									</tr>
 									<tr>
-										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizacion/image/b_BRASIL.gif">&nbsp;Real</td>
+										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_BRASIL.gif">&nbsp;Real</td>
 										<td align="center">'.$compra[1].'</td>
 										<td align="center">'.$venda[1].'</td>
 									</tr>
