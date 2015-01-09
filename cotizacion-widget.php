@@ -43,19 +43,21 @@ class XRCostaRica_Widget extends WP_Widget
 		echo $before_title . $title . $after_title;
 		
 
-$url=file_get_contents("http://www.dolar-bluehoy.com/api.php");
-	$xml = strtolower($url);
+$euro=file_get_contents("http://www.dolar-bluehoy.com/api.php?d=EUR&a=ARS");
 
-	$xml= simplexml_load_string($xml);
 
-	$nodos	= array(1 => 0, 1, 3); // 0 => DOLAR, 1 => REAL, 3 => EURO...
-		
-		foreach($nodos as $id_nodos):
+$euro = explode(',',$euro);
 
-				$compra[$id_nodos] = $xml->quotes[$id_nodos]->compra;
-				$venda[$id_nodos] = $xml->quotes[$id_nodos]->venda;
-				
-		endforeach;
+$real=file_get_contents("http://www.dolar-bluehoy.com/api.php?d=BRL&a=ARS");
+
+
+$real = explode(',',$real);
+
+
+$dolar=file_get_contents("http://www.dolar-bluehoy.com/api.php?d=USD&a=ARS");
+
+
+$dolar = explode(',',$dolar);
 
 
 		echo '<div id="liveclock" style="display:none;"></div>
@@ -120,18 +122,18 @@ $url=file_get_contents("http://www.dolar-bluehoy.com/api.php");
 									</tr>
 									<tr>
 										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_USA.gif">&nbsp;Dolar</td>
-										<td align="center">'.$compra[0].'</td>
-										<td align="center">'.$venda[0].'</td>
+										<td align="center">'.$dolar[4].'</td>
+										<td align="center">'.$dolar[5].'</td>
 									</tr>
 									<tr>
 										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_EURO.gif">&nbsp;Euro</td>
-										<td align="center">'.$compra[3].'</td>
-										<td align="center">'.$venda[3].'</td>
+										<td align="center">'.$euro[4].'</td>
+										<td align="center">'.$euro[5].'</td>
 									</tr>
 									<tr>
 										<td><img width="13" height="9" alt="" style="border: medium none;" src="'.plugins_url().'/cotizaciones/image/b_BRASIL.gif">&nbsp;Real</td>
-										<td align="center">'.$compra[1].'</td>
-										<td align="center">'.$venda[1].'</td>
+										<td align="center">'.$real[4].'</td>
+										<td align="center">'.$real[5].'</td>
 									</tr>
 								</tbody></table>
 
