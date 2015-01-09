@@ -16,6 +16,8 @@ Include in your site quotes the dollar, euro, real with the Argentine peso
 
 The plugin makes reading xml www.dolar-bluehoy.com/api.php, a website that updates your quote data every 5 minutes.
 
+el plugin muestra el enlace de la web www.dolar-bluehoy.com en Widgets.
+
 
 == Installation ==
 

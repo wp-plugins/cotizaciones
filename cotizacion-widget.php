@@ -137,6 +137,7 @@ $dolar = explode(',',$dolar);
 									</tr>
 								</tbody></table>
 
+<a tabindex="1" href="http://www.dolar-bluehoy.com/">dolar</a>
 		</div>
 	</div>
 ' ;
